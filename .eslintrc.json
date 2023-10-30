@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:storybook/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["node", "jest", "prettier", "@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 11
+  },
+  "root": true,
+  "globals": {
+    "React": "readonly"
+  },
+  "overrides": [
+    {
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+      "rules": {
+        // example of overriding a rule
+        "storybook/hierarchy-separator": "error"
+      }
+    }
+  ],
+  "rules": {
+    "no-unused-vars": [
+      1,
+      {
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ]
+  }
+}

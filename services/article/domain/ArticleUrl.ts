@@ -1,0 +1,1 @@
+export const ARTICLE_URL = '//localhost:4000/api';
